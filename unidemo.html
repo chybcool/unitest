@@ -1,62 +1,14 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang='zh-CN'>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="icon" href="/favicon.ico">
-	<title>newtoutiao</title>
-	<link href="/css/app.b08b1b9e.css" rel="preload" as="style">
-	<link href="/css/chunk-vendors.a0f51f48.css" rel="preload" as="style">
-	<link href="/js/app.acd62493.js" rel="preload" as="script">
-	<link href="/js/chunk-vendors.24790ee6.js" rel="preload" as="script">
-	<link href="/css/chunk-vendors.a0f51f48.css" rel="stylesheet"><link href="/css/app.b08b1b9e.css" rel="stylesheet">
+<meta charset='UTF-8'>
+<title>unidemo</title>
+<style type='text/css'>
+</style>
 </head>
-<body>
-<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
- <script type="text/javascript" src="https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js"></script>
-	<div id="app">
-		<button class="btn-list" onClick="buttonclk()">button</button>
-	</div>
-		
-<script type="text/javascript">
-	function buttonclk(){
-		console.log('222')
-		document.addEventListener('UniAppJSBridgeReady', function() {  
-		console.log('1')
-    uni.getEnv((res) =>{
-          console.log('2')
-          var params = {
-            'orderId':'1',
-            'timestamp':'2',
-            'nonceStr':'3',
-            'prepay_id':'4',
-            'signType':'5',
-            'paySign':'6'
-          }
-         var path = `pages/wxpay/index?web=${params}`
-          if (res.miniprogram) {
-            //跳转小程序目标地址url
-            uni.postMessage({
-              data: {
-                action: 'postMessage'
-              }
-            });
-            document.querySelector('.btn-list').addEventListener('click', function(evt) {  
-            	console.log('2')
-        	var target = evt.target;  
-	        	uni.miniProgram.navigateTo({
-	              url: path
-	            })
-	        })
-          }
-        }) 
-})
-
-	}
-	
-</script>
-
+<body style="background:gray;">
+<div style="background-color:white;height:1698px;width:1200px;position:absolute;left:0px;top:0px;overflow:hidden;position:absolute;left:50%;transform:translate(-50%,50px);">
+<div style='z-index:2;margin:0;left:182px;top:148px;width:114px;height:24px;line-height:24.24px;font-size:24.24px;color:#000;position:absolute'>button</div>
+</div>
 </body>
-
-	</html>
+</html>
